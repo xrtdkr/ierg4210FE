@@ -1,0 +1,28 @@
+.category-out {
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  height: 90%;
+}
+
+.category-title {
+  text-align: left;
+  padding: 3px 10px 3px 10px;
+  margin-left: 10%;
+}
+
+.category-content {
+  margin-left: 10%;
+}
+
+.category-list {
+  height: 50px;
+  list-style: None;
+  margin-top: 5px;
+}
+
+.category-list-a {
+  text-decoration: none;
+}
+

@@ -1,0 +1,24 @@
+.commodity-detail-out {
+  width: 300px;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  padding: 10px 10px 5px 5px;
+  margin: 10px 10px 10px 10px;
+}
+
+.commodity-detail-pic {
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  /*display: initial;*/
+  vertical-align: middle;
+}
+
+.commodity-detail-pic .mid-pic {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.intro-row-1 {
+  width: 70%;
+}

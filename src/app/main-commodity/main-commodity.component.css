@@ -1,0 +1,23 @@
+.main-commodity-outer{
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  height: 90%;
+}
+
+.main-commodity-inner {
+  width: 100%;
+  padding: 5% 5% 5% 5%;
+}
+
+.main-commodity-box {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*.main-commodity-table tr {*/
+  /*margin-top: 10px;*/
+/*}*/

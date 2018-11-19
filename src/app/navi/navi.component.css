@@ -1,0 +1,29 @@
+.navi-out {
+  margin-left: 10%;
+  margin-right: 10%;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  height: 10%;
+}
+
+.navi-table {
+  width: 100%;
+}
+
+.navi-table-left {
+  padding-left: 5%;
+  width: 80%;
+}
+
+.navi-out-big-title {
+  font-family: Arial, serif;
+}
+
+
+.navi-shopping-kart-icon{
+  height: 80%;
+  width: auto;
+}
+.navi-shopping-kart-title {
+  font-family: Arial, serif;
+}

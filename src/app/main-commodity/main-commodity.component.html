@@ -1,0 +1,33 @@
+<div class="main-commodity-outer">
+  <div class="main-commodity-inner">
+    <div class="main-commodity-box">
+      <div *ngFor="let commodity of commodityResponse['data']">
+        <app-commodity-detail [commodityElement]="commodity"></app-commodity-detail>
+      </div>
+    </div>
+    <!--<table class="main-commodity-table">-->
+    <!--<tr>-->
+    <!--<td>-->
+    <!--<app-commodity-detail></app-commodity-detail>-->
+    <!--</td>-->
+    <!--<td>-->
+    <!--<app-commodity-detail></app-commodity-detail>-->
+    <!--</td>-->
+    <!--<td>-->
+    <!--<app-commodity-detail></app-commodity-detail>-->
+    <!--</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td>-->
+    <!--<app-commodity-detail></app-commodity-detail>-->
+    <!--</td>-->
+    <!--<td>-->
+    <!--<app-commodity-detail></app-commodity-detail>-->
+    <!--</td>-->
+    <!--<td>-->
+    <!--<app-commodity-detail></app-commodity-detail>-->
+    <!--</td>-->
+    <!--</tr>-->
+    <!--</table>-->
+  </div>
+</div>

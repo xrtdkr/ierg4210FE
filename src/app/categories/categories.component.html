@@ -1,0 +1,21 @@
+<div class="category-out">
+  <div class="category-title">
+    <p class="category-title-content">
+      目录
+    </p>
+  </div>
+
+  <div class="category-content">
+    <!--<ul class="category-content-list" *ngIf="cateResObservable | async as cateRes else empty">-->
+      <!--<li *ngFor="let cate of cateRes.data">-->
+        <!--<a href="" class="category-list-a">{{ cate.name }}</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+    <ul class="category-content-list">
+      <li *ngFor="let cate of cateRes['data']">
+        <a href="" class="category-list-a">{{ cate['name'] }}</a>
+      </li>
+    </ul>
+    <ng-template #empty> No Customers Yet</ng-template>
+  </div>
+</div>
