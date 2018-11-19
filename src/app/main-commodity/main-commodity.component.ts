@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
 import {MainCommodityService} from '../main-commodity.service';
 // import {MainCommodityResponse} from '../modules/mainCommodityResponse';
 import {CommodityResponse} from '../modules/commodityResponse';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'app-main-commodity',
@@ -14,14 +17,18 @@ export class MainCommodityComponent implements OnInit {
   commodityResponse: CommodityResponse;
 
   constructor(
+    private router: ActivatedRoute,
     private mainCommodityService: MainCommodityService,
-  ) { }
-
-  ngOnInit() {
-    this.getCommodityIds(1);
+    private location: Location,
+  ) {
   }
 
-  getCommodityIds(categoryId: number) {
+  ngOnInit() {
+    this.getCommodityIds();
+  }
+
+  getCommodityIds(): void {
+    const categoryId = this.router.snapshot.paramMap.get('id');
     this.mainCommodityService.getMainCommodityService(categoryId.toString()).subscribe(
       (totalCommodityRes) => this.commodityResponse = totalCommodityRes
     );
