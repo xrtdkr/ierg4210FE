@@ -9,6 +9,7 @@ import {CommodityDetailComponent} from './commodity-detail/commodity-detail.comp
 import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
     NaviComponent,
     MainCommodityComponent,
     CommodityDetailComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
