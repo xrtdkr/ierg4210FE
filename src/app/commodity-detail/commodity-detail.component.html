@@ -1,7 +1,7 @@
 <div class="commodity-detail-out" *ngIf="commodityElement">
   <div class="commodity-detail-pic">
     <!--<img class="mid-pic" src="https://img-blog.csdn.net/20160818160845364?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">-->
-    <img class="mid-pic" src="{{commodityElement['image']}}">
+    <a href="detail/{{commodityElement['id']}}"><img class="mid-pic" src="{{commodityElement['image']}}"></a>
   </div>
 
   <div class="commodity-detail-intro">
@@ -15,7 +15,7 @@
       <tr>
         <td>{{commodityElement['description']}}</td>
         <td>
-          <button class="buy-button">现在购买</button>
+          <button class="global-button-small">现在购买</button>
         </td>
       </tr>
     </table>

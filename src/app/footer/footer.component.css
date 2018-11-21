@@ -1,0 +1,12 @@
+.footer-out {
+  margin-left: 10%;
+  margin-right: 10%;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  height: 13%;
+  margin-top: 2%;
+}
+
+.footer-inner {
+  padding: 0 20% 0 20%
+}

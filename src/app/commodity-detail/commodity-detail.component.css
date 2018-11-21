@@ -22,3 +22,16 @@
 .intro-row-1 {
   width: 70%;
 }
+
+.global-button-small {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  height: 36px;
+  width: 96px;
+}

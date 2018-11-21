@@ -1,0 +1,22 @@
+<div class="big-detail-outer" *ngIf="singleCommoResponse">
+  <div class="big-detail-inner">
+    <table class="big-detail-table">
+      <tbody>
+      <tr class="big-detail-tr">
+        <td class="big-detail-img">
+          <img src="{{ singleCommoResponse['data']['image']}}" class="big-img">
+        </td>
+        <td class="big-detail-intro">
+          <h1 class="big-detail-title">
+            {{ singleCommoResponse['data']['name']}}
+          </h1>
+          <p> {{singleCommoResponse['data']['description']}}</p>
+
+          <p>仅需 {{singleCommoResponse['data']['price']}}</p>
+          <button class="global-button-big"> 购买 </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

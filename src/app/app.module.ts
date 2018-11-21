@@ -10,6 +10,8 @@ import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
+import { AdminComponent } from './admin/admin.component';
+import { CommodityDetailBigComponent } from './commodity-detail-big/commodity-detail-big.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FooterComponent } from './footer/footer.component';
     MainCommodityComponent,
     CommodityDetailComponent,
     ShoppingCartComponent,
-    FooterComponent
+    FooterComponent,
+    AdminComponent,
+    CommodityDetailBigComponent
   ],
   imports: [
     BrowserModule,
