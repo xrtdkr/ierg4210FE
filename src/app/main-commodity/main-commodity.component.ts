@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
-import {MainCommodityService} from '../main-commodity.service';
+import {MainCommodityService} from '../core/main-commodity.service';
 // import {MainCommodityResponse} from '../modules/mainCommodityResponse';
 import {CommodityResponse} from '../modules/commodityResponse';
 import {ActivatedRoute} from '@angular/router';

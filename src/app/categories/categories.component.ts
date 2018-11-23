@@ -1,8 +1,8 @@
 import {HttpClient} from '@angular/common/http';
 import {Component, Input, OnInit} from '@angular/core';
-import {CategoryService} from '../category.service';
+import {CategoryService} from '../core/category.service';
 import {CategoryResponse} from '../modules/categoryResponse';
-import {MOCKCATERES} from '../modules/mock-cateRes';
+// import {MOCKCATERES} from '../modules/mock-cateRes';
 import {Observable} from 'rxjs';
 
 

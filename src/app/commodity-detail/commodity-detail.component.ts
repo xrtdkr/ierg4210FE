@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CommodityElementService} from '../commodity-element.service';
+import {CommodityElementService} from '../core/commodity-element.service';
 import {CommodityResponse} from '../modules/commodityResponse';
 import {CommodityElement} from '../modules/commodityElement';
 

@@ -1,7 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {SingleCommoResponse} from './modules/singleCommoResponse';
+import {SingleCommoResponse} from '../modules/singleCommoResponse';
 import {Observable} from 'rxjs';
+import {CommodityElement} from '../modules/commodityElement';
+import {CommonSuccess} from '../modules/commonSuccess';
 
 
 @Injectable({
@@ -21,4 +23,6 @@ export class CommodityElementService {
     return this.http.get<SingleCommoResponse>(this.getCommodityElementUrl, {params});
   }
 
+  // addCommodityElement(commodityElement: CommodityElement): Observable<CommonSuccess> {
+  // }
 }

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CommodityElement} from '../modules/commodityElement';
-import {CommodityElementService} from '../commodity-element.service';
+import {CommodityElementService} from '../core/commodity-element.service';
 import {SingleCommoResponse} from '../modules/singleCommoResponse';
 
 @Component({

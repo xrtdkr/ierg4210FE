@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 // import {MainCommodityResponse} from './modules/mainCommodityResponse';
-import {CommodityResponse} from './modules/commodityResponse';
+import {CommodityResponse} from '../modules/commodityResponse';
 
 @Injectable({
   providedIn: 'root'
