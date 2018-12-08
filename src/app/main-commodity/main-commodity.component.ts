@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
 import {MainCommodityService} from '../core/main-commodity.service';
 // import {MainCommodityResponse} from '../modules/mainCommodityResponse';
-import {CommodityResponse} from '../modules/commodityResponse';
+import {CommodityResponse} from '../modules/commodity/commodityResponse';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 

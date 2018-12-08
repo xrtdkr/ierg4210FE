@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import {AppComponent} from './app.component';
 import {CategoriesComponent} from './categories/categories.component';
@@ -12,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin/admin.component';
 import { CommodityDetailBigComponent } from './commodity-detail-big/commodity-detail-big.component';
+import { CateAdminFormComponent } from './admin/forms/cate-admin-form/cate-admin-form.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { CommodityDetailBigComponent } from './commodity-detail-big/commodity-de
     ShoppingCartComponent,
     FooterComponent,
     AdminComponent,
-    CommodityDetailBigComponent
+    CommodityDetailBigComponent,
+    CateAdminFormComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

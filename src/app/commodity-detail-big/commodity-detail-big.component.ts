@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {CommodityElement} from '../modules/commodityElement';
+import {CommodityElement} from '../modules/commodity/commodityElement';
 import {CommodityElementService} from '../core/commodity-element.service';
-import {SingleCommoResponse} from '../modules/singleCommoResponse';
+import {SingleCommoResponse} from '../modules/commodity/singleCommoResponse';
 
 @Component({
   selector: 'app-commodity-detail-big',

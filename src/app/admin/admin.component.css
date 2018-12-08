@@ -1,0 +1,80 @@
+.admin-outer {
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  height: 90%;
+}
+
+.admin-inner {
+  width: 100%;
+  padding: 5% 5% 5% 5%;
+}
+
+.admin-cate {
+  width: 90%;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  padding: 1% 2% 1% 2%;
+  margin: 1% 0 1% 0;
+}
+
+.admin-production {
+  width: 90%;
+  -webkit-box-shadow: 5px 5px 13px 1px #C4C4C4;
+  box-shadow: 5px 5px 13px 1px #C4C4C4;
+  padding: 1% 2% 1% 2%;
+  margin: 1% 0 1% 0;
+}
+
+.admin-cate-table {
+  width: 90%;
+}
+
+.admin-cate-title-table {
+  width: 90%;
+}
+
+.admin-tr-title {
+  background-color: #66FFCC;
+}
+
+.admin-cate td {
+  width: 25%;
+}
+
+.admin-cate-update-table {
+  width: 90%;
+}
+.admin-cate-update-table td {
+  width: 25%;
+}
+
+.admin-prod-title-table {
+  width: 90%;
+}
+
+.admin-prod-table {
+  width: 90%;
+}
+
+.admin-production td {
+  width: 14%;
+}
+
+.admin-prod-table td {
+  width: 14%;
+}
+
+.admin-td-image {
+  width: 50px;
+  height: 50px;
+}
+
+.admin-prod-form{
+  width: 90%
+}
+
+.admin-prod-add-table {
+  width: 14%;
+}

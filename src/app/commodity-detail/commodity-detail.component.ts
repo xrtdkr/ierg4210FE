@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CommodityElementService} from '../core/commodity-element.service';
-import {CommodityResponse} from '../modules/commodityResponse';
-import {CommodityElement} from '../modules/commodityElement';
+import {CommodityResponse} from '../modules/commodity/commodityResponse';
+import {CommodityElement} from '../modules/commodity/commodityElement';
 
 @Component({
   selector: 'app-commodity-detail',

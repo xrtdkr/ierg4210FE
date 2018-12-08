@@ -1,1 +1,94 @@
+<div class="admin-outer">
+  <div class="admin-inner">
+    <div class="admin-title">
+      <h1>welcome to admin</h1>
+    </div>
+    <div class="admin-content">
+      <div class="admin-cate">
+        <h3>category</h3>
+        <table class="admin-cate-title-table">
+          <tr class="admin-tr-title">
+            <td>id</td>
+            <td>name</td>
+            <td>description</td>
+            <td></td>
+          </tr>
+        </table>
+        <table class="admin-cate-table" *ngIf="categoryResponse">
+          <tr *ngFor="let cateEle of categoryResponse.data" class="admin-tr-ele">
+            <td>{{ cateEle.id }}</td>
+            <td>{{cateEle.name}}</td>
+            <td>{{cateEle.description}}</td>
+            <td>
+              <button (click)="deleteCategory(cateEle.id)">删除</button>
+            </td>
+          </tr>
+        </table>
+        <form class="admin-cate-class">
+          <table class="admin-cate-update-table">
+            <tr>
+              <td>
+                <input name="id" type="number" placeholder="id built by server" disabled>
+              </td>
+              <td>
+                <input name="name" [(ngModel)]="addName" placeholder="name of a new category"/>
+              </td>
+              <td>
+                <input name="description" [(ngModel)]="addDescription" placeholder="new description"/>
+              </td>
+              <td>
+                <button (click)="addCategory()">提交</button>
+              </td>
+            </tr>
+          </table>
+        </form>
 
+      </div>
+      <div class="admin-production">
+        <h3>Productions</h3>
+        <table class="admin-prod-title-table">
+          <tr class="admin-tr-title">
+            <td>id</td>
+            <td>name</td>
+            <td>category_id</td>
+            <td>image</td>
+            <td>price(HKD)</td>
+            <td>description</td>
+            <td></td>
+          </tr>
+        </table>
+        <table class="admin-prod-table">
+          <tr *ngFor="let prodEle of commodityResponse.data" class="admin-tr-ele">
+            <td>{{ prodEle.id }}</td>
+            <td> {{ prodEle.name }}</td>
+            <td> {{ prodEle.category_id }}</td>
+            <td><img src="{{ prodEle.image }}" class="admin-td-image"></td>
+            <td> {{ prodEle.price }}</td>
+            <td> {{ prodEle.description }}</td>
+            <td>delete</td>
+          </tr>
+        </table>
+        <form class="admin-prod-form">
+          <table class="admin-prod-add-table">
+            <tr>
+              <td><input name="id" type="number" placeholder="id built by server" disabled></td>
+              <td><input name="name" [(ngModel)]="addCommodity.name" placeholder="input a name"/></td>
+              <td>
+                  <select>
+                    <option *ngFor="let cate of categoryResponse.data">
+                      {{ cate.id }}
+                    </option>
+                  </select>
+              </td>
+              <td><input name="image" [(ngModel)]="addCommodity.image" placeholder="prod_image"/></td>
+              <td><input name="price" [(ngModel)]="addCommodity.price" placeholder="prod_price"/></td>
+              <td><input name="description" [(ngModel)]="addCommodity.description" placeholder="prod_description"/></td>
+              <td><button class="admin-pro-add-button">添加</button></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

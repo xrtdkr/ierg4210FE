@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
-import {SingleCommoResponse} from '../modules/singleCommoResponse';
+import {SingleCommoResponse} from '../modules/commodity/singleCommoResponse';
 import {Observable} from 'rxjs';
-import {CommodityElement} from '../modules/commodityElement';
-import {CommonSuccess} from '../modules/commonSuccess';
+import {CommodityElement} from '../modules/commodity/commodityElement';
+import {CommonSuccess} from '../modules/common/commonSuccess';
 
 
 @Injectable({

@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {CategoryResponse} from '../modules/categoryResponse';
-import {CommonSuccess} from '../modules/commonSuccess';
-import {CategoryElement} from '../modules/categoryElement';
+import {CategoryResponse} from '../modules/category/categoryResponse';
+import {CommonSuccess} from '../modules/common/commonSuccess';
+import {CategoryElement} from '../modules/category/categoryElement';
 
 @Injectable({
   providedIn: 'root'
@@ -28,12 +28,7 @@ export class CategoryService {
     const formData = new FormData();   // 有可能出纰漏的点： 这个可能是不可变变量
     formData.append('name', cateEle.name);
     formData.append('description', cateEle.description);
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'multipart/form-data',
-      })
-    };
-    return this.http.post<CommonSuccess>(this.addCateUrl, formData, httpOptions);
+    return this.http.post<CommonSuccess>(this.addCateUrl, cateEle);
   }
 
   updateCategory(caleEle: CategoryElement): Observable<CommonSuccess> {
@@ -51,15 +46,7 @@ export class CategoryService {
   }
 
   deleteCategory(id: number): Observable<CommonSuccess> {
-    const formData = new FormData();
-    formData.append('id', id.toString());
-
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'multipart/form-data',
-      })
-    };
-    return this.http.post<CommonSuccess>(this.deleteCateUrl, formData, httpOptions);
+    return this.http.post<CommonSuccess>(this.deleteCateUrl, {'id': id});
   }
 
 }
