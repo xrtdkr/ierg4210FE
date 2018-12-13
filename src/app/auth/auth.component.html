@@ -1,3 +1,83 @@
-<p>
-  auth works!
-</p>
+<div class="auth-outer">
+  <div class="auth-inner">
+
+    <div class="auth-login" *ngIf="!registerFlag">
+      <div class="auth-login-title">
+        <h1>Login an Account</h1>
+      </div>
+
+      <div class="auth-login-main">
+        <form class="auth-login-form">
+          <div class="page">
+            <div class="page__demo">
+              <label class="field a-field a-field_a1 page__field">
+                <input class="field__input a-field__input" name="email" [(ngModel)]="loginEmail"
+                       placeholder="e.g. xurui@lumiaxu.com" required>
+                <span class="a-field__label-wrap">
+                    <span class="a-field__label">E-mail</span>
+                </span>
+              </label>
+              <br>
+              <label class="field a-field a-field_a2 page__field">
+                <!--<input class="field__input a-field__input" name="password" [(ngModel)]="loginPassword" placeholder="e.g. passw0rd" type="password"-->
+                <!--required>-->
+                <input class="field__input a-field__input" name="password" [(ngModel)]="loginPassword"
+                       placeholder="e.g. passw0rd" type="password" required>
+                <span class="a-field__label-wrap">
+                <span class="a-field__label">password</span></span>
+              </label>
+            </div>
+          </div>
+          <div class="login-button">
+            <!--<button class="global-button-small" (click)="login()")>Log In</button>-->
+            <button class="global-button-small" (click)="login()">Log In</button>
+          </div>
+          <!--<label> email:-->
+          <!--<input class="auth-login-email" name="email">-->
+          <!--</label>-->
+          <!--<br>-->
+          <!--<label> password:-->
+          <!--<input class="auth-login-password" name="password" type="password">-->
+          <!--</label>-->
+        </form>
+      </div>
+    </div>
+
+    <div class="auth-register" *ngIf="registerFlag">
+      <div class="auth-reg-title">
+        <h1>Register an Account</h1>
+      </div>
+      <div class="auth-reg-main">
+        <form class="auth-reg-form">
+          <div class="page">
+            <div class="page__demo">
+              <label class="field a-field a-field_a3 page__field">
+                <input class="field__input a-field__input" name="username" [(ngModel)]="registerUsername" placeholder="e.g. lumiaxu" required>
+                <span class="a-field__label-wrap">
+                  <span class="a-field__label">Username</span>
+                </span>
+              </label>
+              <br>
+              <label class="field a-field a-field_a1 page__field">
+                <input class="field__input a-field__input" name="email" [(ngModel)]="registerEmail" placeholder="e.g. xurui@lumiaxu.com" required>
+                <span class="a-field__label-wrap">
+                    <span class="a-field__label">E-mail</span>
+                </span>
+              </label>
+              <br>
+              <label class="field a-field a-field_a2 page__field">
+                <input class="field__input a-field__input" name="password" [(ngModel)]="registerPassword" placeholder="e.g. passw0rd" type="password"
+                       required>
+                <span class="a-field__label-wrap">
+                <span class="a-field__label">password</span></span>
+              </label>
+            </div>
+          </div>
+          <div class="login-button">
+            <button class="global-button-small" (click)="register()">register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

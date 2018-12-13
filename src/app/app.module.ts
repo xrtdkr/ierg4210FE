@@ -15,6 +15,7 @@ import { AdminComponent } from './admin/admin.component';
 import { CommodityDetailBigComponent } from './commodity-detail-big/commodity-detail-big.component';
 import { CateAdminFormComponent } from './admin/forms/cate-admin-form/cate-admin-form.component';
 import { AuthComponent } from './auth/auth.component';
+import { CookieService} from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { AuthComponent } from './auth/auth.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

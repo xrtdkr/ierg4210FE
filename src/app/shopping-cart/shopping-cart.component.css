@@ -7,7 +7,7 @@
 }
 
 .shopping-kart-drop-down {
-  margin-right: 11%;
+  margin-right: 12%;
   display: none;
   position: absolute;
   background-color: #ffffff;
@@ -59,3 +59,12 @@
   display: inline-block;
   font-size: 16px;
 }
+
+.shop-cart-list {
+  list-style: none;
+}
+
+.drop-down-ele-img {
+  width: 50px;
+}
+

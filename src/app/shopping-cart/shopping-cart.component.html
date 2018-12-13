@@ -15,66 +15,12 @@
   <div class="shopping-kart-drop-down">
     <div class="drop-down-content">
       <ul class="drop-down-content-list">
-        <li>
-          <table>
+        <li *ngFor="let prodEle of shopCartCommodity.data" class="shop-cart-list">
+          <table class="drop-down-ele-table">
             <tr>
-              <td>商品的缩略图</td>
-              <td>商品的描述</td>
-              <td>商品的数量以及价格</td>
-            </tr>
-          </table>
-        </li>
-        <li>
-          <table>
-            <tr>
-              <td>商品的缩略图</td>
-              <td>商品的描述</td>
-              <td>商品的数量以及价格</td>
-            </tr>
-          </table>
-        </li>
-        <li>
-          <table>
-            <tr>
-              <td>商品的缩略图</td>
-              <td>商品的描述</td>
-              <td>商品的数量以及价格</td>
-            </tr>
-          </table>
-        </li>
-        <li>
-          <table>
-            <tr>
-              <td>商品的缩略图</td>
-              <td>商品的描述</td>
-              <td>商品的数量以及价格</td>
-            </tr>
-          </table>
-        </li>
-        <li>
-          <table>
-            <tr>
-              <td>商品的缩略图</td>
-              <td>商品的描述</td>
-              <td>商品的数量以及价格</td>
-            </tr>
-          </table>
-        </li>
-        <li>
-          <table>
-            <tr>
-              <td>商品的缩略图</td>
-              <td>商品的描述</td>
-              <td>商品的数量以及价格</td>
-            </tr>
-          </table>
-        </li>
-        <li>
-          <table>
-            <tr>
-              <td>商品的缩略图</td>
-              <td>商品的描述</td>
-              <td>商品的数量以及价格</td>
+              <td class="small-pic"><img src="{{prodEle.image}}" class="drop-down-ele-img"></td>
+              <td>{{ prodEle.name }}</td>
+              <td>price: ${{ prodEle.price }}</td>
             </tr>
           </table>
         </li>

@@ -5,6 +5,7 @@ import {MainCommodityComponent} from './main-commodity/main-commodity.component'
 import {RouterModule, Routes} from '@angular/router';
 import {CommodityDetailBigComponent} from './commodity-detail-big/commodity-detail-big.component';
 import {AdminComponent} from './admin/admin.component';
+import {AuthComponent} from './auth/auth.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'index/:id', component: MainCommodityComponent},
   {path: 'detail/:id', component: CommodityDetailBigComponent},
   {path: 'admin', component: AdminComponent},
+  {path: 'auth/:id', component: AuthComponent},
   // {path: 'index/:id', outlet: 'cat', component: CategoriesComponent},
 ];
 
