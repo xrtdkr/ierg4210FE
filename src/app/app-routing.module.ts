@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {CommodityDetailBigComponent} from './commodity-detail-big/commodity-detail-big.component';
 import {AdminComponent} from './admin/admin.component';
 import {AuthComponent} from './auth/auth.component';
+import {CheckoutComponent} from './checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'detail/:id', component: CommodityDetailBigComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'auth/:id', component: AuthComponent},
+  {path: 'checkout', component: CheckoutComponent},
   // {path: 'index/:id', outlet: 'cat', component: CategoriesComponent},
 ];
 

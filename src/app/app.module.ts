@@ -16,6 +16,8 @@ import { CommodityDetailBigComponent } from './commodity-detail-big/commodity-de
 import { CateAdminFormComponent } from './admin/forms/cate-admin-form/cate-admin-form.component';
 import { AuthComponent } from './auth/auth.component';
 import { CookieService} from 'ngx-cookie-service';
+import { CheckoutComponent } from './checkout/checkout.component';
+import {NgxPayPalModule} from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import { CookieService} from 'ngx-cookie-service';
     AdminComponent,
     CommodityDetailBigComponent,
     CateAdminFormComponent,
-    AuthComponent
+    AuthComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    NgxPayPalModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

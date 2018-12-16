@@ -1,0 +1,30 @@
+<div class="checkout-outer">
+  <div class="checkout-confirm" *ngIf="!check">
+    <button>confirm my order</button>
+  </div>
+
+  <div class="checkout-form" *ngIf="check">
+    <div class="checkout-form-bill">
+      <p>Your bill series: {{ billRes.data.bill.bill_series }}</p>
+      <p>Create the bill at (UTC):{{billRes.data.bill.create_time}}</p>
+    </div>
+
+    <div class="checkout-form-content">
+      <div class="single-content" *ngFor="let prod of billRes.data.prod">
+        <table>
+          <tr>
+            <td><p>production name: {{prod.name}}</p></td>
+            <td>production price: {{prod.price}}</td>
+            <td>production image: {{prod.image}}</td>
+            <td>production description: {{prod.description}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout-button">
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+  </div>
+</div>
+
