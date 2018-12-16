@@ -19,9 +19,13 @@ export class AuthComponent implements OnInit {
   registerEmail = '';
   registerUsername = '';
   registerPassword = '';
-  cookie: string;
+
+  updateOldPassword = '';
+  updateNewPassword = '';
 
   registerFlag: boolean;
+  updatePasswordFlag: boolean;
+
 
   constructor(
     private authService: AuthService,
@@ -39,6 +43,7 @@ export class AuthComponent implements OnInit {
   controlRegister(): void {
     const registerF = this.activeRouter.snapshot.paramMap.get('id');
     this.registerFlag = registerF === 'register';
+    this.updatePasswordFlag = registerF === 'update';
   }
 
   login(): void {
@@ -52,6 +57,12 @@ export class AuthComponent implements OnInit {
     const mRegister = new AuthRegisterModel(this.registerUsername, this.registerPassword, this.registerEmail);
     this.authService.register(mRegister).subscribe(
       () => this.router.navigateByUrl('auth')
+    );
+  }
+
+  update(): void {
+    this.authService.update(this.updateOldPassword, this.updateNewPassword).subscribe(
+      () => this.router.navigateByUrl('index/1')
     );
   }
 

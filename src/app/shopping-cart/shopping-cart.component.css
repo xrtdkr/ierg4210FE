@@ -7,7 +7,7 @@
 }
 
 .shopping-kart-drop-down {
-  margin-right: 12%;
+  width: 263px;
   display: none;
   position: absolute;
   background-color: #ffffff;
@@ -68,3 +68,8 @@
   width: 50px;
 }
 
+.cart-not-login {
+  width: 220px;
+  padding-left: 50px;
+  padding-top: 100px;
+}

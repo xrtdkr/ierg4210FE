@@ -15,7 +15,7 @@
       <tr>
         <td>{{commodityElement['description']}}</td>
         <td>
-          <button class="global-button-small">现在购买</button>
+          <button (click)="addCartProd(commodityElement['id'])" class="global-button-small">Add to Cart</button>
         </td>
       </tr>
     </table>

@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {CommodityElementService} from '../core/commodity-element.service';
 import {CommodityResponse} from '../modules/commodity/commodityResponse';
 import {CommodityElement} from '../modules/commodity/commodityElement';
+import {ShoppingCartService} from '../core/shopping-cart.service';
 
 @Component({
   selector: 'app-commodity-detail',
@@ -13,7 +14,7 @@ export class CommodityDetailComponent implements OnInit {
   @Input() commodityElement: CommodityElement;
 
   constructor(
-    // private commodityElementService: CommodityElementService,
+    private shoppingCartService: ShoppingCartService,
   ) {
   }
 
@@ -21,9 +22,10 @@ export class CommodityDetailComponent implements OnInit {
     // this.getCommodityDetailById(this.commodityId);
   }
 
-  // getCommodityDetailById(id: number) {
-  //   this.commodityElementService.getCommodityElement(id.toString()).subscribe((commoRes) => this.commodityResponse = commoRes);
-  // }
-
+  addCartProd(pid: number): void {
+    this.shoppingCartService.addCartProd(pid).subscribe(
+      () => location.reload()
+    );
+  }
 
 }

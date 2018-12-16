@@ -1,9 +1,10 @@
 <div class="auth-outer">
   <div class="auth-inner">
 
-    <div class="auth-login" *ngIf="!registerFlag">
+    <div class="auth-login" *ngIf="(!registerFlag)&&(!updatePasswordFlag)">
       <div class="auth-login-title">
         <h1>Login an Account</h1>
+        <p>Do not have an account? click <a href="auth/register">here</a> to register</p>
       </div>
 
       <div class="auth-login-main">
@@ -77,6 +78,38 @@
             <button class="global-button-small" (click)="register()">register</button>
           </div>
         </form>
+      </div>
+    </div>
+
+    <div class="update-password" *ngIf="updatePasswordFlag">
+      <div class="update-title">
+        <h1>Modify the password</h1>
+      </div>
+
+      <div class="update-main">
+        <form class="update-form">
+          <div class="page">
+            <div class="page__demo">
+              <label class="field a-field a-field_a3 page__field">
+                <input class="field__input a-field__input" type="password" name="old_password" [(ngModel)]="updateOldPassword" placeholder="e.g. lumiaxu" required>
+                <span class="a-field__label-wrap">
+                  <span class="a-field__label">Old Password</span>
+                </span>
+              </label>
+              <br>
+              <label class="field a-field a-field_a1 page__field">
+                <input class="field__input a-field__input" type="password" name="new_password" [(ngModel)]="updateNewPassword" placeholder="e.g. xurui@lumiaxu.com" required>
+                <span class="a-field__label-wrap">
+                    <span class="a-field__label">New Password</span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="update-button">
+            <button class="global-button-small" (click)="update()">update</button>
+          </div>
+        </form>
+
       </div>
     </div>
   </div>

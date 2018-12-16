@@ -29,9 +29,15 @@ export class AdminComponent implements OnInit {
   categoryResponse: CategoryResponse;
 
   commodityResponse: CommodityResponse;
-  addCommodity = new CommodityElement(
-    -1, 'default', -1, 'none', -1, 'none'
-  );
+  // addCommodity = new CommodityElement(
+  //   -1, 'default', -1, 'none', -1, 'none'
+  // );
+  addProdName = '';
+  addProdCategoryID = 0;
+  files: FileList;
+  addProdPrice = 0;
+  addProdDescription = '';
+
   successMsg: CommonSuccess;
 
   constructor(
@@ -72,6 +78,18 @@ export class AdminComponent implements OnInit {
   getProduction(): void {
     this.mainCommodityService.getAllCommodity().subscribe(
       commoRes => this.commodityResponse = commoRes
+    );
+  }
+
+  addProduction(): void {
+    this.mainCommodityService.addCommodity(
+      this.addProdName,
+      this.addProdCategoryID,
+      this.files,
+      this.addProdPrice,
+      this.addProdDescription,
+    ).subscribe(
+      () => location.reload()
     );
   }
 

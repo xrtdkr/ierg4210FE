@@ -72,18 +72,18 @@
           <table class="admin-prod-add-table">
             <tr>
               <td><input name="id" type="number" placeholder="id built by server" disabled></td>
-              <td><input name="name" [(ngModel)]="addCommodity.name" placeholder="input a name"/></td>
+              <td><input name="name" [(ngModel)]="addProdName" placeholder="input a name"/></td>
               <td>
-                  <select>
+                  <select [(ngModel)] = "addProdCategoryID">
                     <option *ngFor="let cate of categoryResponse.data">
                       {{ cate.id }}
                     </option>
                   </select>
               </td>
-              <td><input name="image" [(ngModel)]="addCommodity.image" placeholder="prod_image"/></td>
-              <td><input name="price" [(ngModel)]="addCommodity.price" placeholder="prod_price"/></td>
-              <td><input name="description" [(ngModel)]="addCommodity.description" placeholder="prod_description"/></td>
-              <td><button class="admin-pro-add-button">添加</button></td>
+              <td><input name="file" type="file" placeholder="prod_image"/></td>
+              <td><input name="price" [(ngModel)]="addProdPrice" placeholder="prod_price"/></td>
+              <td><input name="description" [(ngModel)]="addProdDescription" placeholder="prod_description"/></td>
+              <td><button class="admin-pro-add-button" (click)="addProduction()">添加</button></td>
             </tr>
           </table>
         </form>

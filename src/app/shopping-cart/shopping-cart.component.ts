@@ -5,6 +5,7 @@ import {ShoppingCartService} from '../core/shopping-cart.service';
 import {CommodityElementService} from '../core/commodity-element.service';
 import {ShopCartResponse} from '../modules/shopping-cart/shopCartResponse';
 import {CommodityResponse} from '../modules/commodity/commodityResponse';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -22,6 +23,7 @@ export class ShoppingCartComponent implements OnInit {
     private http: HttpClient,
     private shoppingCartService: ShoppingCartService,
     private commodityService: CommodityElementService,
+    private location: Location,
   ) {
   }
 
@@ -41,6 +43,22 @@ export class ShoppingCartComponent implements OnInit {
     this.shoppingCartService.getShoppingCart().subscribe(
       shapCR => this.shopCartCommodity = shapCR
     );
+  }
+
+  addCartProd(pid: number): void {
+    this.shoppingCartService.addCartProd(pid).subscribe(
+      () => location.reload()
+    );
+  }
+
+  deleteCartProd(pid: number): void {
+    this.shoppingCartService.deleteCartProd(pid).subscribe(
+      () => location.reload()
+    );
+  }
+
+  logout(): void {
+    this.cookieService.delete('user');
   }
 
 }
