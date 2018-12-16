@@ -1,6 +1,6 @@
 <div class="checkout-outer">
   <div class="checkout-confirm" *ngIf="!check">
-    <button>confirm my order</button>
+    <button class="checkout-confirm-button" (click)="yieldBill()">confirm my order</button>
   </div>
 
   <div class="checkout-form" *ngIf="check">

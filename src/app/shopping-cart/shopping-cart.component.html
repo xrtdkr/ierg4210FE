@@ -15,14 +15,16 @@
 
   <div class="shopping-kart-drop-down">
     <div class="drop-down-content">
-      <ul class="drop-down-content-list"  *ngIf="isLogin">
+      <ul class="drop-down-content-list" *ngIf="isLogin">
         <li *ngFor="let prodEle of shopCartCommodity.data" class="shop-cart-list">
           <table class="drop-down-ele-table">
             <tr>
               <td class="small-pic"><img src="{{prodEle.image}}" class="drop-down-ele-img"></td>
               <td>{{ prodEle.name }}</td>
               <td>price: ${{ prodEle.price }}</td>
-              <td><button class="global-button-small" (click)="deleteCartProd(prodEle.id)">删除</button> </td>
+              <td>
+                <button class="global-button-small" (click)="deleteCartProd(prodEle.id)">删除</button>
+              </td>
             </tr>
           </table>
         </li>
@@ -30,7 +32,9 @@
       <p class="cart-not-login" *ngIf="!isLogin">您还没有登录，请<a href="auth/login">登录</a></p>
     </div>
     <div class="drop-down-buy-button">
-      <button class="buy-button" *ngIf="isLogin">结账</button>
+      <a href="checkout">
+        <button class="buy-button" *ngIf="isLogin">结账</button>
+      </a>
     </div>
   </div>
 </div>

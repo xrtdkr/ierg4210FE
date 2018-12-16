@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PayPalConfig, PayPalEnvironment, PayPalIntegrationType} from 'ngx-paypal';
 import {of} from 'rxjs';
 import {BillResponse} from '../modules/bills/bill-response';
+import {BillServiceService} from '../core/bill-service.service';
 
 
 @Component({
@@ -24,11 +25,22 @@ export class CheckoutComponent implements OnInit {
   //   });
   // }
 
-  constructor() {
+  constructor(
+    private billService: BillServiceService,
+  ) {
   }
 
   ngOnInit() {
     this.initConfig();
+  }
+
+  public yieldBill(): void {
+    this.check = true;
+    this.billService.checkout().subscribe(
+      res => {
+        this.billRes = res;
+      }
+    );
   }
 
   private initConfig(): void {
