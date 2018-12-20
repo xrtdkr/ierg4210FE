@@ -4,6 +4,7 @@ import {SingleCommoResponse} from '../modules/commodity/singleCommoResponse';
 import {Observable} from 'rxjs';
 import {CommodityElement} from '../modules/commodity/commodityElement';
 import {CommonSuccess} from '../modules/common/commonSuccess';
+import {Configs} from '../config/config';
 
 
 @Injectable({
@@ -11,7 +12,9 @@ import {CommonSuccess} from '../modules/common/commonSuccess';
 })
 export class CommodityElementService {
 
-  getCommodityElementUrl = 'http://localhost:8080/api/getCommodity';
+  HOST = Configs.testHost;
+
+  getCommodityElementUrl = this.HOST + '/api/getCommodity';
 
   constructor(
     private http: HttpClient,

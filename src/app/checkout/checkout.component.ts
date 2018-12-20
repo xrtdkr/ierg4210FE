@@ -15,6 +15,7 @@ export class CheckoutComponent implements OnInit {
   public payPalConfig?: PayPalConfig;
   public check = false;
   public billRes: BillResponse;
+  public total: number;
 
   // private loadExternalScript(scriptUrl: string) {
   //   return new Promise((resolve, reject) => {

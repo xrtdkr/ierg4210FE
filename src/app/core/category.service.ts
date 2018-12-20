@@ -4,16 +4,19 @@ import {Observable} from 'rxjs';
 import {CategoryResponse} from '../modules/category/categoryResponse';
 import {CommonSuccess} from '../modules/common/commonSuccess';
 import {CategoryElement} from '../modules/category/categoryElement';
+import {Configs} from '../config/config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
 
-  private getCateUrl = 'http://127.0.0.1:8080/api/getCate/';
-  private addCateUrl = 'http://127.0.0.1:8080/api/category/add/';
-  private updateCateUrl = 'http://127.0.0.1:8080/api/category/update/';
-  private deleteCateUrl = 'http://127.0.0.1:8080/api/category/delete/';
+  HOST = Configs.testHost;
+
+  private getCateUrl = this.HOST + '/api/getCate/';
+  private addCateUrl = this.HOST + '/api/category/add/';
+  private updateCateUrl = this.HOST + '/api/category/update/';
+  private deleteCateUrl = this.HOST + '/api/category/delete/';
 
   constructor(
     private http: HttpClient,

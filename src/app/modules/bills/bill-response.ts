@@ -6,9 +6,10 @@ export class BillResponse {
   data: {
     'bill': Bill,
     'prod': CommodityElement[],
+    'alipay': string,
   };
 
-  constructor(msg: string, data: { bill: Bill; prod: CommodityElement[] }) {
+  constructor(msg: string, data: { bill: Bill; prod: CommodityElement[]; alipay: string }) {
     this.msg = msg;
     this.data = data;
   }

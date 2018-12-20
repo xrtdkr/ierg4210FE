@@ -5,15 +5,18 @@ import {AuthRegisterModel} from '../modules/auth/authRegisterModel';
 import {Observable} from 'rxjs';
 import {CommonSuccess} from '../modules/common/commonSuccess';
 import {HttpClient} from '@angular/common/http';
+import {Configs} from '../config/config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private registerUrl = 'http://127.0.0.1:8080/api/register/';
-  private loginUrl = 'http://127.0.0.1:8080/api/login/';
-  private updateUrl = 'http://127.0.0.1:8080/api/update/';
+  HOST = Configs.testHost;
+
+  private registerUrl = this.HOST + '/api/register/';
+  private loginUrl = this.HOST + '/api/login/';
+  private updateUrl = this.HOST + '/api/update/';
 
   constructor(
     private cookieService: CookieService,

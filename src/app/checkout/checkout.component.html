@@ -4,27 +4,44 @@
   </div>
 
   <div class="checkout-form" *ngIf="check">
+    <h2>This is your bill</h2><br>
     <div class="checkout-form-bill">
       <p>Your bill series: {{ billRes.data.bill.bill_series }}</p>
       <p>Create the bill at (UTC):{{billRes.data.bill.create_time}}</p>
     </div>
 
     <div class="checkout-form-content">
-      <div class="single-content" *ngFor="let prod of billRes.data.prod">
+      <div class="single-content">
         <table>
           <tr>
-            <td><p>production name: {{prod.name}}</p></td>
-            <td>production price: {{prod.price}}</td>
-            <td>production image: {{prod.image}}</td>
-            <td>production description: {{prod.description}}</td>
+            <td>production name</td>
+            <td>production price</td>
+            <td>production image</td>
+            <td>production description</td>
+          </tr>
+          <tr *ngFor="let prod of billRes.data.prod">
+            <td>{{prod.name}}</td>
+            <td>{{prod.price}}</td>
+            <td><img class="checkout-img" src="{{prod.image}}"></td>
+            <td>{{prod.description}}</td>
           </tr>
         </table>
+
+        <p>total: </p>
       </div>
     </div>
-  </div>
 
+  </div>
   <div class="checkout-button">
     <ngx-paypal [config]="payPalConfig"></ngx-paypal>
   </div>
+
+  <div>
+    <a href="{{billRes.data.alipay}}">
+      <button class="checkout-confirm-button">支付宝支付</button>
+    </a>
+  </div>
+
+
 </div>
 

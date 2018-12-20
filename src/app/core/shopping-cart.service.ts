@@ -4,14 +4,18 @@ import {Observable} from 'rxjs';
 import {ShopCartResponse} from '../modules/shopping-cart/shopCartResponse';
 import {CommonSuccess} from '../modules/common/commonSuccess';
 import {CommodityResponse} from '../modules/commodity/commodityResponse';
+import {Configs} from '../config/config';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShoppingCartService {
-  getShoppingCartUrl = 'http://127.0.0.1:8080/api/getShoppingCart/';
-  addCartProdUrl = 'http://127.0.0.1:8080/api/addCartProd/';
-  deleteCartProdUrl = 'http://127.0.0.1:8080/api/deleteCartProd/';
+
+  HOST = Configs.testHost;
+
+  getShoppingCartUrl = this.HOST + '/api/getShoppingCart/';
+  addCartProdUrl = this.HOST + '/api/addCartProd/';
+  deleteCartProdUrl = this.HOST + '/api/deleteCartProd/';
 
 
   constructor(

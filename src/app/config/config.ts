@@ -1,4 +1,4 @@
 export const Configs = {
-  'prodHost': 'http://54.254.178.156:80',
+  'prodHost': 'https://s13.ierg4210.ie.cuhk.edu.hk',
   'testHost': 'http://127.0.0.1:8080',
 };
