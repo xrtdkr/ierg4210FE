@@ -9,7 +9,7 @@ import {BillResponse} from '../modules/bills/bill-response';
 })
 export class BillServiceService {
 
-  HOST = Configs.testHost;
+  HOST = Configs.prodHost;
   checkoutUrl = this.HOST + '/api/checkout/';
 
   constructor(

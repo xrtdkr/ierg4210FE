@@ -11,7 +11,7 @@ import {Configs} from '../config/config';
 })
 export class CategoryService {
 
-  HOST = Configs.testHost;
+  HOST = Configs.prodHost;
 
   private getCateUrl = this.HOST + '/api/getCate/';
   private addCateUrl = this.HOST + '/api/category/add/';

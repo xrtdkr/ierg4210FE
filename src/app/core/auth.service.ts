@@ -12,7 +12,7 @@ import {Configs} from '../config/config';
 })
 export class AuthService {
 
-  HOST = Configs.testHost;
+  HOST = Configs.prodHost;
 
   private registerUrl = this.HOST + '/api/register/';
   private loginUrl = this.HOST + '/api/login/';

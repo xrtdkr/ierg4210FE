@@ -11,7 +11,7 @@ import {Configs} from '../config/config';
 })
 export class ShoppingCartService {
 
-  HOST = Configs.testHost;
+  HOST = Configs.prodHost;
 
   getShoppingCartUrl = this.HOST + '/api/getShoppingCart/';
   addCartProdUrl = this.HOST + '/api/addCartProd/';

@@ -12,7 +12,7 @@ import {Configs} from '../config/config';
 
 export class MainCommodityService {
 
-  HOST = Configs.testHost;
+  HOST = Configs.prodHost;
 
   private mainCommodityUrl = this.HOST + '/api/getProductionById';
   private getCommodityUrl = this.HOST + '/api/production/get/';

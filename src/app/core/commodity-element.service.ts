@@ -12,7 +12,7 @@ import {Configs} from '../config/config';
 })
 export class CommodityElementService {
 
-  HOST = Configs.testHost;
+  HOST = Configs.prodHost;
 
   getCommodityElementUrl = this.HOST + '/api/getCommodity';
 
